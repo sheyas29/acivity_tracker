@@ -1,0 +1,27 @@
+.progress-bar {
+  width: 120px; /* Adjust width as needed */
+  height: 50vh; /* Adjust height to fit within the container */
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative; /* Contained within the parent */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column-reverse; /* Reverse the flex direction to make it grow from bottom to top */
+  border: 2px solid #244855; /* Adding an outline to the progress bar */
+}
+
+.progress {
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(36, 72, 85, 1) 0%,
+    rgba(144, 174, 173, 1) 100%
+  ); /* Gradient fill for the progress */
+  text-align: center;
+  color: white;
+  transition: height 0.5s ease-in-out, transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

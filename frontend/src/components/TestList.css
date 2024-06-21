@@ -1,0 +1,30 @@
+.test-list {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.test-list h1 {
+  text-align: center;
+  color: #244855; /* Header color */
+}
+
+.test-list ul {
+  padding: 0;
+}
+
+.test-list li {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #0fa4af; /* List item background */
+  border: 1px solid #fbe9d0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  color: #fff;
+}
+
+.test-list li:hover {
+  background-color: #464674; /* List item hover background */
+  transform: scale(1.02);
+}

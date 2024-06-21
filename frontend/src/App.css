@@ -1,0 +1,68 @@
+body {
+  background: linear-gradient(
+      90deg,
+      rgba(36, 72, 85, 0.9) 0%,
+      /* #244855 in rgba */ rgba(144, 174, 173, 0.9) 100%
+    ),
+    url("C:\Users\kshre\OneDrive\Desktop\actvity_tracker\frontend\src\components\activity_tracker_bg.png"); /* Gradient background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly transparent white background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #e64833; /* Button background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #874f41; /* Button hover background */
+  transform: scale(1.1);
+}
+
+h1 {
+  color: #244855; /* Header color */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #e64833; /* List item background */
+  border: 1px solid #fbe9d0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  color: #fff;
+}
+
+li:hover {
+  background-color: #874f41; /* List item hover background */
+  transform: scale(1.02);
+}

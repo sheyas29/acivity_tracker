@@ -1,0 +1,153 @@
+.test-detail {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px; /* Adjust as needed */
+  margin: auto;
+  text-align: left;
+  background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0.6) 0%,
+      rgba(129, 129, 166, 0.6) 50%,
+      rgba(0, 212, 255, 0.6) 100%
+    ),
+    url("C:\Users\kshre\OneDrive\Desktop\actvity_tracker\frontend\src\components\activity_tracker_bg.png"); /* Reference the image from the public folder */
+  background-size: cover, auto; /* Ensure the pattern and gradient cover the container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  align-items: flex-start; /* Ensure top alignment */
+}
+
+.info-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  margin-right: 20px;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.total-activities,
+.completed-activities {
+  background-color: #afdde5; /* Info box background */
+  border: 1px solid #fbe9d0;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #0a0a0a;
+}
+
+.content {
+  flex: 3;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Align items to the top */
+}
+
+.test-detail h1 {
+  text-align: center;
+  color: #f5f5f5; /* Header color */
+}
+
+.test-detail table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  flex: 1;
+}
+
+.test-detail th,
+.test-detail td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  transition: background-color 0.3s;
+  color: #f5f5f5; /* Table text color */
+}
+.test-detail th:first-child,
+.test-detail td:first-child {
+  width: 50px; /* Adjust the width as needed */
+  text-align: center;
+}
+.test-detail th:last-child,
+.test-detail td:last-child {
+  width: 100px; /* Adjust the width as needed */
+  text-align: center;
+}
+
+.test-detail th {
+  background-color: #90aead; /* Table header background */
+  text-align: center;
+  color: #fff;
+}
+
+.test-detail tr:hover {
+  background-color: #40607c; /* Table row hover background */
+  transform: scale(1.02);
+}
+
+.test-detail tr.completed {
+  background-color: #90aead; /* Completed row background */
+  text-decoration: line-through;
+  transition: background-color 0.3s;
+  color: #fff;
+}
+
+.test-detail input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.pagination {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  background-color: #928f8e; /* Pagination button background */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.pagination button.active {
+  background-color: #90aead; /* Active pagination button background */
+}
+
+.pagination button:hover {
+  background-color: #417387; /* Pagination button hover background */
+  transform: scale(1.1);
+}
+
+.animated-button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #003135; /* Button background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.animated-button:hover {
+  background-color: #0fa4af; /* Button hover background */
+  transform: scale(1.1);
+}
+
+.animated-checkbox {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.animated-checkbox:checked {
+  transform: scale(1.2);
+}
