@@ -1,11 +1,13 @@
 const express = require("express");
 const mysql = require("mysql");
+const path = require("path");
 const cors = require("cors");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
+// MySQL connection
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -20,6 +22,10 @@ db.connect((err) => {
   console.log("MySQL connected...");
 });
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'frontend/build')));
+
+// API routes
 app.get("/tests", (req, res) => {
   const sql = "SELECT * FROM tests";
   db.query(sql, (err, result) => {
@@ -56,6 +62,12 @@ app.post("/tests/:id/reset", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+// Handle all other routes and return the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+});
+
+// Start the server
+app.listen(3000, '0.0.0.0', () => {
   console.log("Server running on port 3000");
 });

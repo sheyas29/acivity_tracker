@@ -10,7 +10,7 @@
       rgba(129, 129, 166, 0.6) 50%,
       rgba(0, 212, 255, 0.6) 100%
     ),
-    url("C:\Users\kshre\OneDrive\Desktop\actvity_tracker\frontend\src\components\activity_tracker_bg.png"); /* Reference the image from the public folder */
+    url('./activity_tracker_bg.png'); /* Reference the image from the public folder */
   background-size: cover, auto; /* Ensure the pattern and gradient cover the container */
   padding: 20px;
   border-radius: 10px;

@@ -4,7 +4,7 @@ body {
       rgba(36, 72, 85, 0.9) 0%,
       /* #244855 in rgba */ rgba(144, 174, 173, 0.9) 100%
     ),
-    url("C:\Users\kshre\OneDrive\Desktop\actvity_tracker\frontend\src\components\activity_tracker_bg.png"); /* Gradient background */
+    url("./components/activity_tracker_bg.png"); /* Gradient background */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;

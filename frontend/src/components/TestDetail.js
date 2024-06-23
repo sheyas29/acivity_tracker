@@ -9,16 +9,19 @@ function TestDetail({ test, setSelectedTest }) {
   const [currentPage, setCurrentPage] = useState(1);
   const activitiesPerPage = 10;
 
+  // Replace localhost with your local IP address
+  const localIPAddress = "192.168.0.104";
+
   useEffect(() => {
-    axios.get(`http://localhost:3000/tests/${test.id}`).then((response) => {
+    axios.get(`http://${localIPAddress}:3000/tests/${test.id}`).then((response) => {
       setActivities(response.data);
     });
-  }, [test]);
+  }, [test, localIPAddress]);
 
   const markAsComplete = (activityId) => {
     axios
       .post(
-        `http://localhost:3000/tests/${test.id}/activities/${activityId}/complete`
+        `http://${localIPAddress}:3000/tests/${test.id}/activities/${activityId}/complete`
       )
       .then((response) => {
         setActivities((prevActivities) =>
@@ -33,7 +36,7 @@ function TestDetail({ test, setSelectedTest }) {
 
   const resetActivities = () => {
     axios
-      .post(`http://localhost:3000/tests/${test.id}/reset`)
+      .post(`http://${localIPAddress}:3000/tests/${test.id}/reset`)
       .then((response) => {
         setActivities((prevActivities) =>
           prevActivities.map((activity) => ({
